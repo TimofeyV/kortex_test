@@ -1,0 +1,32 @@
+{% extends 'staff/base.html' %}
+{% load static %}
+
+
+{% block menu %}
+    <button><a href="{% url 'add' %}">Добавить сотрудника</a></button>
+{% endblock %}
+
+{% block body %}
+    <table class = 'list'>
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Фамилия</th>
+                <th scope="col">Имя</th>
+                <th scope="col">Отчество</th>
+                <th scope="col">Должность</th>
+                <th scope="col">Дата трудоустройства</th>
+            </tr>
+        </thead>
+        {% for p in employees %}
+        <tr>
+            <td class="id">{{p.id}}</td>
+            <td><a href='{% url 'change' p.id %}' >{{p.surname}}</a></td>
+            <td>{{p.name}}</td>
+            <td>{{p.patronymic}}</td>
+            <td>{{p.position}}
+            <td>{{p.date_of_employment}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

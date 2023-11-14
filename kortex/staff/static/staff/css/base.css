@@ -1,0 +1,114 @@
+html{
+    background: #f69a73;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.menu button{
+    border-width: 0;
+    background: white;
+    width: 220px;
+    height: 50px;
+    margin: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 20px
+}
+
+.menu a{
+    background: white;
+    text-decoration: none;
+    color: #f69a73;
+}
+
+.list{
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+}
+
+.id{
+    width: 5%;
+}
+
+.list td, th{
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+
+}
+
+.list a{
+    color: #f69a73;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 300px;
+    margin: 50px auto 0;
+    background: white;
+    border-radius: 30px;
+    padding: 5%;
+
+}
+
+.form input, select{
+    width: 80%;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    background: #E9EFF6;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+}
+
+.form select{
+    height: 40px;
+    padding: 0 15px;
+    width: 92%;
+}
+
+.form label{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+.send{
+    margin-top: 30px;
+    background: #f69a73 !important;
+    border-bottom: 4px solid #d87d56;
+    color: white;
+    font-size: 14px;
+}
+
+.form button{
+    width: 300px;
+    margin: 10px auto 0;
+    line-height: 40px;
+    border-radius: 20px;
+    background: white;
+    border: 3px solid red;
+}
+
+.form button a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: red;
+}

@@ -1,0 +1,26 @@
+{% extends 'staff/base.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="form">
+        <form method="POST">
+            {% csrf_token %}
+            <input type = 'text' name="surname" value="{{employee.surname}}">
+            <input type = 'text' name="name" value="{{employee.name}}">
+            <input type = 'text' name="patronymic" value="{{employee.patronymic}}">
+            <select id="position" name = 'position'>
+                {% for o in positions %}
+                    {% if employee.position == o %}
+                        <option value="{{o.name}}" selected >{{o.name}}</option>
+                    {% else %}
+                        <option value="{{o.name}}">{{o.name}}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+            <input type='date' name="date_of_employment" value="{{date}}">
+            <input type="submit" value="Сохранить">
+        </form>
+        <button><a href="{% url 'delete' employee.id %}">Удалить сотрудника</a></button>
+    </div>
+
+{% endblock %}

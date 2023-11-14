@@ -1,0 +1,21 @@
+{% extends 'staff/base.html' %}
+{% load static %}
+
+{% block menu %}
+<button><a href="{% url 'add_position' %}">Добавить должность</a></button>
+{% endblock %}
+
+{% block body %}
+    <table class="list">
+        <thead>
+            <tr>
+                <th scope="col">Название</th>
+            </tr>
+        </thead>
+        {% for p in positions %}
+            <tr>
+                <td><a href="{% url 'change_position' p.id %}">{{p.name}}</a> </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

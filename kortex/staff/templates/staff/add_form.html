@@ -1,0 +1,12 @@
+{% extends 'staff/base.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="form">
+        <form method="POST">
+            {% csrf_token %}
+            {{form}}
+            <input class='send' type="submit" value="Сохранить">
+        </form>
+    </div>
+{% endblock %}

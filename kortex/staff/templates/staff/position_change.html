@@ -1,0 +1,14 @@
+{% extends 'staff/base.html' %}
+{% load static %}
+
+{% block body %}
+<div class="form">
+    <form method="POST">
+        {% csrf_token %}
+        <input type='text' name="name" value="{{position.name}}">
+        <input type="submit" value="Сохранить">
+    </form>
+    <button><a href="{% url 'delete_position' position.id %}">Удалить должность</a></button>
+</div>
+
+{% endblock %}
